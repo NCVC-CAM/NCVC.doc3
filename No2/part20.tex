@@ -9,46 +9,46 @@
 G98毎分送りかG99毎回転送りによって変わりますので適宜読み替えてください．
 送り速度に小数点が付く場合は［表記］タブの［Fパラメータ表記］を［小数点］にしておくと良いでしょう．
 
-%\begin{minipage}{0.5\textwidth}
-%\begin{figure}[H]
-%\centering
-%\includegraphics[scale=0.7]{No2/fig/ncj1.png}
-%\caption{端面処理設定}
-%\label{fig:ncj1.png}
-%\end{figure}
-%\end{minipage}
-%\begin{minipage}{0.5\textwidth}
-%\begin{figure}[H]
-%\centering
-%\includegraphics[scale=0.7]{No2/fig/ncj2.png}
-%\caption{下穴加工設定}
-%\label{fig:ncj2.png}
-%\end{figure}
-%\end{minipage}
+\begin{minipage}{0.5\textwidth}
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.7]{No2/fig/ncj1.png}
+\caption{端面処理設定}
+\label{fig:ncj1.png}
+\end{figure}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.7]{No2/fig/ncj2.png}
+\caption{下穴加工設定}
+\label{fig:ncj2.png}
+\end{figure}
+\end{minipage}
 
-%\begin{minipage}{0.5\textwidth}
-%\begin{figure}[H]
-%\centering
-%\includegraphics[scale=0.7]{No2/fig/ncj3.png}
-%\caption{内径加工設定}
-%\label{fig:ncj3.png}
-%\end{figure}
-%\end{minipage}
-%\begin{minipage}{0.5\textwidth}
-%\begin{figure}[H]
-%\centering
-%\includegraphics[scale=0.7]{No2/fig/ncj4.png}
-%\caption{外径加工設定}
-%\label{fig:ncj4.png}
-%\end{figure}
-%\end{minipage}
+\begin{minipage}{0.5\textwidth}
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.7]{No2/fig/ncj3.png}
+\caption{内径加工設定}
+\label{fig:ncj3.png}
+\end{figure}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.7]{No2/fig/ncj4.png}
+\caption{外径加工設定}
+\label{fig:ncj4.png}
+\end{figure}
+\end{minipage}
 
-%\begin{figure}[H]
-%\centering
-%\includegraphics[scale=0.7]{No2/fig/ncj5.png}
-%\caption{突切（溝）加工設定}
-%\label{fig:ncj5.png}
-%\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.7]{No2/fig/ncj5.png}
+\caption{突切（溝）加工設定}
+\label{fig:ncj5.png}
+\end{figure}
 
 \begin{itemize}
 \item 端面\\
@@ -68,12 +68,12 @@ G98毎分送りかG99毎回転送りによって変わりますので適宜読�
 ［固定サイクルで生成］にチェックが入ると，G83固定サイクルモードで加工データが生成されます．\\
 　ドリル切削か既存下穴サイズが無いと次の内径切削で図7のエラーが表示されます．
 
-%\begin{figure}[H]
-%\centering
-%\includegraphics[scale=0.7]{No2/fig/error.png}
-%\caption{内径生成時のエラー}
-%\label{fig:error.png}
-%\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.8]{No2/fig/error.png}
+\caption{内径生成時のエラー}
+\label{fig:error.png}
+\end{figure}
 
 \vspace*{1zh}
 \item 内径と外径\\
@@ -82,12 +82,12 @@ G98毎分送りかG99毎回転送りによって変わりますので適宜読�
 荒取り工程の座標計算ができない場合があるのでご注意ください．
 この場合は被削材を反対に取り付けるなど，切削工程の見直しが必要です．
 
-%\begin{figure}[H]
-%\centering
-%\includegraphics{No2/fig/inout.pdf}
-%\caption{内外径の荒取り}
-%\label{fig:inout.pdf}
-%\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics{No2/fig/inout-crop.pdf}
+\caption{内外径の荒取り}
+\label{fig:inout.pdf}
+\end{figure}
 
 \vspace*{1zh}
 \item 突切\\
@@ -95,26 +95,27 @@ G98毎分送りかG99毎回転送りによって変わりますので適宜読�
 図９のように長い場合はその線の長さ分だけＺ軸方向の切削コードが生成されますが，短い場合はＸ軸方向を往復する切削コードが生成されます．
 突っ切りバイトで前者の切削は仕上げ等で使うかもしれませんが，切り込み量などにご注意ください．通常後者になると思われます．
 
-%\begin{minipage}{0.5\textwidth}
-%\begin{figure}[H]
-%\centering
-%\includegraphics{No2/fig/groove1.pdf}
-%\caption{作図線と切削コードの関係}
-%\label{fig:ngroove1.pdf}
-%\end{figure}
-%\end{minipage}
-%\begin{minipage}{0.5\textwidth}
-%\begin{figure}[H]
-%\centering
-%\includegraphics{No2/fig/groove2.pdf}
-%\caption{工具基準点}
-%\label{fig:groove2.pdf}
-%\end{figure}
-%\end{minipage}
-
 　工具基準点は図１０のようになっています．生成される座標が作図した線の左・中央・右になります．
 \end{itemize}
 
+\begin{minipage}{0.6\textwidth}
+\begin{figure}[H]
+\centering
+\includegraphics{No2/fig/groove1-crop.pdf}
+\caption{作図線と切削コードの関係}
+\label{fig:ngroove1.pdf}
+\end{figure}
+\end{minipage}
+\begin{minipage}{0.4\textwidth}
+\begin{figure}[H]
+\centering
+\includegraphics{No2/fig/groove2-crop.pdf}
+\caption{工具基準点}
+\label{fig:groove2.pdf}
+\end{figure}
+\end{minipage}
+
+\vspace*{1zh}
 　サンプルのカスタムヘッダー・フッターをリスト1に示します．
 章の冒頭で述べたように旋盤に必要なG99毎回点送りやG96周速一定制御指示などを追加してください．
 さらにカスタムヘッダー・フッターで使用可能な旋盤生成に関する置換キーワードを表1に示します．
@@ -143,6 +144,8 @@ M30
 
 \begin{table}[H]
 \centering
+\caption{置換キーワード}
+\label{tab:keyword}
 \begin{tabular}{|p{3cm}|p{10cm}|}
 \hline
 ProgNo & 加工条件の［生成］タブにあるプログラム番号に置換 \\ \hline

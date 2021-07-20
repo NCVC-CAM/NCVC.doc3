@@ -1,0 +1,78 @@
+##
+## NCVC:旋盤用切削条件ﾌｧｲﾙ
+##	X軸の値は半径値です。ﾀﾞｲｱﾛｸﾞ設定では２倍されます。
+##
+#--> Page:1
+Header           = "C:\Program Files\NCVC\HeaderLathe.txt" ; ｶｽﾀﾑﾍｯﾀﾞｰ
+Footer           = "C:\Program Files\NCVC\FooterLathe.txt" ; ｶｽﾀﾑﾌｯﾀﾞｰ
+#--> Page:2
+ProgSet          =        1     ; Ｏ番号生成
+ProgNo           =        1     ; ﾌﾟﾛｸﾞﾗﾑ番号
+ProgAuto         =        1     ; おまかせ番号
+LineAdd          =        0     ; 行番号追加
+LineForm         = "N%04d"      ; 行番号書式
+LineAddType      =        1     ; 行番号倍率
+EOB              = ""           ; EOB
+G90              =        0     ; 位置指令(0:G90,1:G91)
+GClip            =        1     ; ﾓｰﾀﾞﾙ
+DisableSpindle   =        0     ; Sﾊﾟﾗﾒｰﾀを生成しない
+#--> Page:3
+Dot              =        0     ; 座標表記(0:小数3位,1:小数4位,2:1/1000)
+FDot             =        0     ; Fﾊﾟﾗﾒｰﾀ表記(0:小数点,1:1/1000,2:整数)
+ZeroCut          =        1     ; 小数点以下のｾﾞﾛｶｯﾄ
+CircleCode       =        0     ; 円ﾃﾞｰﾀの切削(0:G02,1:G03)
+CircleIJ         =        0     ; 円弧指示(0:R,1:I/J)
+CircleHalf       =        0     ; 全円は2分割
+ZeroCutIJ        =        1     ; [I|J]0は省略
+Ellipse          =        0.500 ; 楕円公差
+EllipseFlg       =        1     ; 長径と短径が等しい楕円は円とみなす
+#--> Page:4
+EndFace          =        1     ; 端面処理を行う
+EndFaceCustom    = "\n(TANMEN START)\n(Enter TANMEN-tool change code etc)" ; 端面ｶｽﾀﾑｺｰﾄﾞ
+EndFaceSpindle   =      200     ; 端面主軸回転数
+EndFaceFeed      =      150.000 ; 端面切削送り
+EndFaceCut       =       -5.000 ; 端面最終切り込み
+EndFaceStep      =       -1.000 ; 端面切り込みｽﾃｯﾌﾟ
+EndFacePullZ     =        2.000 ; 端面引き代(Z)
+EndFacePullX     =        2.000 ; 端面引き代(X)
+#--> Page:5
+UseDrill         = "10"         ; 使用ドリル(複数の場合はｺﾝﾏで区切る)
+DrillSpindle     = "1000"       ; 下穴主軸回転数
+DrillFeed        = "1"          ; 下穴切削送り
+DrillCustom      = "(Enter drill-tool change code etc)" ; 下穴ｶｽﾀﾑｺｰﾄﾞ
+PilotHole        =        0.000 ; 既存下穴ｻｲｽﾞ
+DrillCycle       =        0     ; 固定ｻｲｸﾙで生成
+DrillZ           =      -50.000 ; 切り込み
+DrillQ           =       15.000 ; R点
+DrillQ           =       15.000 ; Q値
+DrillD           =       10.000 ; 戻り量
+Dwell            =        0.000 ; 下穴ﾄﾞｳｪﾙ時間[msec]
+#--> Page:6
+InsideCustom     = "\n(NAIKEI START)\n(Enter NAIKEI-tool change code etc)" ; 内径ｶｽﾀﾑｺｰﾄﾞ
+InsideSpindle    =      200     ; 内径主軸回転数
+InsideFeed       =      300.000 ; 内径切削送り(Z)
+InsideFeedX      =      150.000 ; 内径切削送り(X)
+InsideCut        =        0.500 ; 内径切り込み(半径値)
+InsidePullZ      =        2.000 ; 内径引き代(Z)
+InsidePullX      =        2.000 ; 内径引き代(X半径値)
+InsideMargin     =        1.000 ; 内径仕上げ代(半径値)
+InsideMarginNum  =        1     ; 内径仕上げ回数
+#--> Page:7
+OutsideCustom    = "\n(GAIKEI START)\n(Enter GAIKEI-tool change code etc)" ; 外径ｶｽﾀﾑｺｰﾄﾞ
+OutsideSpindle   =      200     ; 外径主軸回転数
+Feed             =        1.000 ; 外径切削送り(Z)
+XFeed            =        0.500 ; 外径切削送り(X)
+Cut              =        1.000 ; 外径切り込み(半径値)
+PullZ            =        2.000 ; 外径引き代(Z)
+PullX            =        1.000 ; 外径引き代(X半径値)
+Margin           =        0.500 ; 外径仕上げ代(半径値)
+MarginNum        =        2     ; 外径仕上げ回数
+#--> Page:8
+GrooveCustom     = "\n(Grooving START)\n(Enter Groove-tool change code etc)" ; 突っ切りｶｽﾀﾑｺｰﾄﾞ
+GrooveSpindle    =       50     ; 突っ切り主軸回転数
+GrooveFeed       =        0.100 ; 突っ切り切削送り(Z)
+GrooveFeedX      =        0.100 ; 突っ切り切削送り(X)
+GroovePullX      =        2.000 ; 突っ切り引き代(X半径値)
+GrooveDwell      =     1000.000 ; 突っ切りﾄﾞｳｪﾙ時間[msec]
+GrooveWidth      =        3.000 ; 突っ切り刃幅
+GrooveTool       =        0     ; 突っ切り工具基準点(0:左,1:中央,2:右)
